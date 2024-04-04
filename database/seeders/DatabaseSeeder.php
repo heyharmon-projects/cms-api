@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
             $this->call([
                 LocalOrganizationsSeeder::class,
                 LocalUsersSeeder::class,
+                WebsiteSeeder::class,
+                PageSeeder::class,
             ]);
         }
     }

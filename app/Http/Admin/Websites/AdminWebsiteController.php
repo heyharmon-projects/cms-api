@@ -1,15 +1,15 @@
 <?php
 
-namespace DDD\Http\Websites;
+namespace DDD\Http\Admin\Websites;
 
 use DDD\App\Controllers\Controller;
 use DDD\Domain\Organizations\Organization;
 use DDD\Domain\Websites\Website;
-use DDD\Domain\Websites\Requests\WebsiteStoreRequest;
-use DDD\Domain\Websites\Requests\WebsiteUpdateRequest;
-use DDD\Domain\Websites\Resources\WebsiteResource;
+use DDD\Http\Admin\Websites\Requests\WebsiteStoreRequest;
+use DDD\Http\Admin\Websites\Requests\WebsiteUpdateRequest;
+use DDD\Http\Admin\Websites\Resources\WebsiteResource;
 
-class WebsiteController extends Controller
+class AdminWebsiteController extends Controller
 {
     public function index(Organization $organization)
     {

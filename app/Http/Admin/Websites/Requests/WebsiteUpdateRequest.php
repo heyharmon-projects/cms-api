@@ -1,13 +1,13 @@
 <?php
 
-namespace DDD\Domain\Websites\Requests;
+namespace DDD\Http\Admin\Websites\Requests;
 
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Exception;
 
-class WebsiteStoreRequest extends FormRequest
+class WebsiteUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class WebsiteStoreRequest extends FormRequest
     {
         return [
             'title' => 'nullable|string',
-            'domain' => 'required|string|unique:websites',
+            'domain' => 'nullable|string',
         ];
     }
 

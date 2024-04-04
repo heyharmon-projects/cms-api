@@ -1,15 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use DDD\Http\Websites\WebsiteController;
+use DDD\Http\Public\Pages\PublicPageController;
+use DDD\Http\Admin\Websites\AdminWebsiteController;
+
+Route::prefix('public/{organization:slug}/websites/{website}')->group(function() {
+    Route::get('/pages', [PublicPageController::class, 'show']);
+});
 
 Route::middleware('auth:sanctum')->group(function() {
-    // Websites
-    Route::prefix('{organization:slug}/websites')->group(function() {
-        Route::get('/', [WebsiteController::class, 'index']);
-        Route::post('/', [WebsiteController::class, 'store']);
-        Route::get('/{website}', [WebsiteController::class, 'show']);
-        Route::put('/{website}', [WebsiteController::class, 'update']);
-        Route::delete('/{website}', [WebsiteController::class, 'destroy']);
+    // Admin: Websites
+    Route::prefix('admin/{organization:slug}/websites')->group(function() {
+        Route::get('/', [AdminWebsiteController::class, 'index']);
+        Route::post('/', [AdminWebsiteController::class, 'store']);
+        Route::get('/{website}', [AdminWebsiteController::class, 'show']);
+        Route::put('/{website}', [AdminWebsiteController::class, 'update']);
+        Route::delete('/{website}', [AdminWebsiteController::class, 'destroy']);
     });
 });
