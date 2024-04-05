@@ -2,6 +2,7 @@
 
 namespace DDD\Domain\Blocks;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use DDD\Domain\Pages\Page;
@@ -15,6 +16,16 @@ class Block extends Model
     protected $guarded = [
         'id',
     ];
+
+    /**
+     * Point to the data object class for the blocks 'data' column.
+     * 
+     * @return string
+     */
+    public function dataClass()
+    {
+        return 'DDD\\Domain\\Blocks\\Data\\' . Str::studly($this['group']) . '\\' . Str::studly($this['name']);
+    }
 
     /**
      * Page this block belongs to.

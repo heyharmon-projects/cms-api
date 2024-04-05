@@ -33,12 +33,12 @@ class BlockFactory extends Factory
     public function definition(): array
     {
         $blocks = [
-            ['group' => 'CallToAction', 'name' => 'CallToAction'],
-            ['group' => 'Card',         'name' => 'CardRepeater'],
-            ['group' => 'Feature',      'name' => 'Feature'],
-            ['group' => 'Feature',      'name' => 'FeatureRepeater'],
+            // ['group' => 'CallToAction', 'name' => 'CallToAction'],
+            // ['group' => 'Card',         'name' => 'CardRepeater'],
+            // ['group' => 'Feature',      'name' => 'Feature'],
+            // ['group' => 'Feature',      'name' => 'FeatureRepeater'],
             ['group' => 'Hero',         'name' => 'Hero'],
-            ['group' => 'Testimonial',  'name' => 'Testimonial'],
+            // ['group' => 'Testimonial',  'name' => 'Testimonial'],
         ];
 
         shuffle($blocks);

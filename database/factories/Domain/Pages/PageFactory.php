@@ -17,16 +17,6 @@ class PageFactory extends Factory
     protected $model = Page::class;
 
     /**
-     * Point to the data object class for the blocks 'data' column.
-     * 
-     * @return string
-     */
-    public function dataClass()
-    {
-        return 'Cms\\Domain\\Blocks\\Data\\' . Str::studly($this['group']);
-    }
-
-    /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
