@@ -1,6 +1,6 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Block\Base;
+namespace DDD\Domain\Blocks\Data\Base;
 
 use Spatie\LaravelData\Data;
 use DDD\Domain\Files\Data\FileData;
@@ -13,5 +13,6 @@ class BaseImage extends Data
         public ?string $width,
         public ?string $height,
     ) {
+        // $this->file = FileData::fromModel();
     }
 }
