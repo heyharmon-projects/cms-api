@@ -9,7 +9,7 @@ use DDD\Http\Admin\Websites\Requests\WebsiteStoreRequest;
 use DDD\Http\Admin\Websites\Requests\WebsiteUpdateRequest;
 use DDD\Http\Admin\Websites\Resources\WebsiteResource;
 
-class AdminWebsiteController extends Controller
+class WebsiteController extends Controller
 {
     public function index(Organization $organization)
     {
@@ -29,6 +29,8 @@ class AdminWebsiteController extends Controller
 
     public function show(Organization $organization, Website $website)
     {
+        $website = $website->load('pages');
+        
         return new WebsiteResource($website);
     }
 

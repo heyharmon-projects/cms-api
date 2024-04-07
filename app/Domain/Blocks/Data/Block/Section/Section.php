@@ -10,8 +10,8 @@ class Section extends Data
 {
     public function __construct(
         public ?string $theme,
-        public SectionPadding $padding,
-        public SectionBackground $background,
+        public ?SectionPadding $padding,
+        public ?SectionBackground $background,
     ) {
     }
 }

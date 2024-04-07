@@ -1,12 +1,12 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Feature;
+namespace DDD\Domain\Blocks\Data\CallToAction;
 
 use Spatie\LaravelData\Data;
 use DDD\Domain\Blocks\Data\Block\Section\Section;
 use DDD\Domain\Blocks\Data\Base\BaseContent;
 
-class FeatureData extends Data
+class CallToActionData extends Data
 {
     public function __construct(
         public ?Section $section,
