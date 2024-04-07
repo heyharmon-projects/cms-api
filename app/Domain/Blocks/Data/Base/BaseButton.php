@@ -4,7 +4,7 @@ namespace DDD\Domain\Blocks\Data\Base;
 
 use Spatie\LaravelData\Data;
 
-class BaseTextData extends Data
+class BaseText extends Data
 {
     public function __construct(
         public string $label = 'Button label',

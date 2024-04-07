@@ -1,18 +1,17 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Base;
+namespace DDD\Domain\Files\Data;
 
 use Spatie\LaravelData\Data;
 
-class BaseFileData extends Data
+class FileData extends Data
 {
     public function __construct(
+        public int $id,
         public string $name = 'The file title',
         public string $src = 'https://placehold.co/450x350',
         public string $alt = 'The file alt',
         public ?string $extension,
-        public string $width,
-        public ?string $height,
     ) {
     }
 }

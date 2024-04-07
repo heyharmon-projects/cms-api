@@ -1,10 +1,10 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Block;
+namespace DDD\Domain\Blocks\Data\Block\Section;
 
 use Spatie\LaravelData\Data;
 
-class BlockSectionPaddingData extends Data
+class SectionPadding extends Data
 {
     public function __construct(
         public string $paddingTop = '6xl',

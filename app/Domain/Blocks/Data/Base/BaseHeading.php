@@ -4,7 +4,7 @@ namespace DDD\Domain\Blocks\Data\Base;
 
 use Spatie\LaravelData\Data;
 
-class BaseHeadingData extends Data
+class BaseHeading extends Data
 {
     public function __construct(
         public string $tag = 'h1',
