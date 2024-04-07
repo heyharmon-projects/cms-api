@@ -1,15 +1,41 @@
 <?php
 
-use Spatie\LaravelData\Data;
+namespace DDD\Domain\Blocks\Data;
 
-class PostData extends Data
+use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
+
+class BlockData implements CastsAttributes
 {
-    public function __construct(
-        public string $group,
-        public string $name,
-        public int $order,
-        // public BlockContent $content,
-        // public Carbon $updated_at,
-    ) {
+
+    /**
+     * Cast the given value.
+     *
+     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  string  $key
+     * @param  mixed  $value
+     * @param  array  $attributes
+     * @return array
+     */
+    public function get($model, $key, $value, $attributes)
+    {
+        $value = is_array($value) ? $value : json_decode($value, true);
+
+        return ($model->dataClass()::from($value));
+    }
+
+    /**
+     * Prepare the given value for storage.
+     *
+     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  string  $key
+     * @param  array  $value
+     * @param  array  $attributes
+     * @return array
+     */
+    public function set($model, $key, $value, $attributes)
+    {
+        $value = !is_array($value) ? $value : json_encode($value);
+        
+        return $value;
     }
 }

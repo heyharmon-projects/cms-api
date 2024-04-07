@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
         Website::factory()
             ->has(Page::factory()->count(3)
                 ->has(Block::factory()->count(3)))
-            ->count(3)
+            // ->count(3)
             ->create();
     }
 }
