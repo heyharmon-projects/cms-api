@@ -10,7 +10,7 @@ use InvalidArgumentException;
 
 trait BlockOrderableTrait
 {
-    protected static function bootIsOrderable(): void
+    protected static function bootBlockOrderableTrait(): void
     {
         static::creating(function (Model $model) {
             if (!request()->order) {
