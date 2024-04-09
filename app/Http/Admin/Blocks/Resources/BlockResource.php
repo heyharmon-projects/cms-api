@@ -18,7 +18,7 @@ class BlockResource extends JsonResource
             'group' => $this->group,
             'name' => $this->name,
             'order' => $this->order,
-            'data' => $this->whenLoaded('data'),
+            'data' => $this->data,
         ];
     }
 }

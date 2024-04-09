@@ -26,7 +26,6 @@ class WebsiteFactory extends Factory
         $title = $this->faker->company();
         
         return [
-            // 'organization_id' => Organization::factory(),
             'organization_id' => 1,
             'title' => $title,
             'domain' => Str::slug($title) . '.com',
