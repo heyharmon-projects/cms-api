@@ -24,10 +24,11 @@ class DatabaseSeeder extends Seeder
             $this->call([
                 LocalOrganizationsSeeder::class,
                 LocalUsersSeeder::class,
+                FileSeeder::class,
             ]);
         }
         
-        File::factory()->count(3)->create();
+        // File::factory()->count(3)->create();
         
         // Website::factory()
         //     ->has(Page::factory()->count(3)

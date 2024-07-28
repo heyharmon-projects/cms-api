@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->group(function() {
 
         // Admin: Pages
         Route::prefix('{website}/pages')->group(function() {
-            // Route::get('/', [PageController::class, 'index']);
+            Route::get('/', [PageController::class, 'index']);
             Route::post('/', [PageController::class, 'store']);
             Route::get('/{page}', [PageController::class, 'show']);
             Route::put('/{page}', [PageController::class, 'update']);

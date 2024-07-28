@@ -12,16 +12,16 @@ use DDD\App\Controllers\Controller;
 
 class PageController extends Controller
 {
-    // public function index(Organization $organization, Website $website)
-    // {
-    //     // $pages = $website->pages->with('blocks')->get();
+    public function index(Organization $organization, Website $website)
+    {
+        // $pages = $website->pages->with('blocks')->get();
 
-    //     // $pages = Page::where('website_id', $website->id)
-    //     //     ->with('blocks')
-    //     //     ->get();
+        // $pages = Page::where('website_id', $website->id)
+        //     ->with('blocks')
+        //     ->get();
 
-    //     return PageResource::collection($website->pages);
-    // }
+        return PageResource::collection($website->pages);
+    }
 
     public function store(Organization $organization, Website $website, PageStoreRequest $request)
     {

@@ -42,13 +42,13 @@ Route::middleware('auth:sanctum')->group(function () {
     // Route::prefix('{organization:slug}')->middleware(['organization'])->scopeBindings()->group(function() {
     Route::prefix('{organization:slug}')->scopeBindings()->group(function () {
         // Subscriptions
-        Route::prefix('subscriptions')->group(function () {
-            Route::get('/intent', IntentController::class);
-            Route::get('/plans', [PlanController::class, 'index']);
-            Route::get('/plans/availability', PlanSwapAvailabilityController::class);
-            Route::post('/subscriptions', [SubscriptionController::class, 'store']);
-            Route::patch('/subscriptions', [SubscriptionController::class, 'update']);
-        });
+        // Route::prefix('subscriptions')->group(function () {
+        //     Route::get('/intent', IntentController::class);
+        //     Route::get('/plans', [PlanController::class, 'index']);
+        //     Route::get('/plans/availability', PlanSwapAvailabilityController::class);
+        //     Route::post('/subscriptions', [SubscriptionController::class, 'store']);
+        //     Route::patch('/subscriptions', [SubscriptionController::class, 'update']);
+        // });
 
         // Invitations
         Route::prefix('invitations')->group(function () {
@@ -59,7 +59,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
         // Files
         Route::prefix('files')->group(function () {
-            Route::get('/files', [FileController::class, 'index']);
+            Route::get('/', [FileController::class, 'index']);
             Route::post('/', [FileController::class, 'store']);
             Route::get('/files/{file}', [FileController::class, 'show']);
             Route::delete('/{file}', [FileController::class, 'destroy']);
