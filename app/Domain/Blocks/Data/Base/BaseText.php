@@ -9,7 +9,7 @@ class BaseText extends Data
 {
     public function __construct(
         public string|Optional $tag,
-        public string $content = 'The text content',
+        public string $text = 'The text',
         public string|Optional $size,
     ) {
     }

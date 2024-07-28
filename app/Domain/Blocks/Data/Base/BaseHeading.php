@@ -9,7 +9,7 @@ class BaseHeading extends Data
 {
     public function __construct(
         public string|Optional $tag,
-        public string $content = 'The heading content',
+        public string $text = 'The heading text',
         public string|Optional $size,
     ) {
     }
