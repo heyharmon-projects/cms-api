@@ -2,16 +2,17 @@
 
 namespace DDD\Domain\Blocks\Data\Base;
 
+use Spatie\LaravelData\Optional;
 use Spatie\LaravelData\Data;
 
-class BaseText extends Data
+class BaseButton extends Data
 {
     public function __construct(
         public string $label = 'Button label',
         public string $destination = '/',
-        public ?string $variant,
-        public ?string $size,
-        public ?string $icon,
+        public string|Optional $variant,
+        public string|Optional $size,
+        public string|Optional $icon,
     ) {
     }
 }
