@@ -1,10 +1,10 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Block\Base;
+namespace DDD\Domain\Blocks\Data\Base;
 
 use Spatie\LaravelData\Optional;
 use Spatie\LaravelData\Data;
-use DDD\Domain\Blocks\Data\Block\Base\BaseBackground;
+use DDD\Domain\Blocks\Data\Base\BaseBackground;
 
 class BaseStyles extends Data
 {

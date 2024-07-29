@@ -34,7 +34,7 @@ class Block extends Model
      */
     public function dataClass()
     {
-        return 'DDD\\Domain\\Blocks\\Data\\' . Str::studly($this['group']) . '\\' . Str::studly($this['name']) . 'Data';
+        return 'DDD\\Domain\\Blocks\\Data\\' . Str::studly($this['group']) . '\\' . Str::studly($this['group']) . 'Data';
     }
 
     /**

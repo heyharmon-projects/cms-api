@@ -20,6 +20,7 @@ class BlockController extends Controller
 
     public function store(Organization $organization, Website $website, Page $page, BlockStoreRequest $request)
     {
+        // return $request->validated();
         $block = $page->blocks()->create($request->validated());
         
         return new BlockResource($block);

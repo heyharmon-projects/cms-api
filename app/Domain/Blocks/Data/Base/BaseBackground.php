@@ -1,6 +1,6 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Block\Base;
+namespace DDD\Domain\Blocks\Data\Base;
 
 use Spatie\LaravelData\Data;
 use DDD\Domain\Files\Data\FileData;
