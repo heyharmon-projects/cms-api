@@ -13,14 +13,8 @@ use DDD\App\Controllers\Controller;
 
 class BlockController extends Controller
 {
-    // public function index(Organization $organization, Website $website)
-    // {
-    //     return PageResource::collection($website->blocks);
-    // }
-
     public function store(Organization $organization, Website $website, Page $page, BlockStoreRequest $request)
     {
-        // return $request->validated();
         $block = $page->blocks()->create($request->validated());
         
         return new BlockResource($block);

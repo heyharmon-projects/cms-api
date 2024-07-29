@@ -18,9 +18,8 @@ class PageResource extends JsonResource
             'website_id' => $this->website_id,
             'title' => $this->title,
             'path' => $this->path,
-            'blocks' => $this->blocks,
-            // 'blocks' => BlockResource::collection($this->whenLoaded('blocks')),
-            // 'blocks' => $this->whenLoaded('blocks'),
+            // 'blocks' => $this->blocks,
+            'blocks' => $this->whenLoaded('blocks'),
         ];
     }
 }

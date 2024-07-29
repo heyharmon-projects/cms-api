@@ -29,7 +29,6 @@ Route::middleware('auth:sanctum')->group(function() {
 
             // Admin: Blocks
             Route::prefix('{page}/blocks')->group(function() {
-                // Route::get('/', [BlockController::class, 'index']);
                 Route::post('/', [BlockController::class, 'store']);
                 Route::get('/{block}', [BlockController::class, 'show']);
                 Route::put('/{block}', [BlockController::class, 'update']);
