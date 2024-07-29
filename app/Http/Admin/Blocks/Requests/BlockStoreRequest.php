@@ -24,7 +24,7 @@ class BlockStoreRequest extends FormRequest
     {
         return [
             'group' => 'required|string',
-            'name' => 'required|string',
+            'component' => 'required|string',
             'order' => 'nullable|integer|min:0',
             'data' => 'nullable|array',
         ];

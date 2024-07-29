@@ -25,17 +25,17 @@ class HeroFactory extends Factory
         return [
             'page_id' => Page::factory(),
             'group' => 'Hero',
-            'name' => 'Hero',
+            'component' => 'Hero',
             'data' => [
                 'content' => [
                     'pretitle' => [
-                        'content' => 'Pretitle',
+                        'text' => 'Pretitle',
                     ],
                     'title' => [
-                        'content' => 'Title',
+                        'text' => 'Title',
                     ],
                     'body' => [
-                        'content' => 'Body',
+                        'text' => 'Body',
                     ],
                     'buttons' => [
                         [

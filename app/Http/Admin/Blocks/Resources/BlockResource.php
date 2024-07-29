@@ -16,7 +16,7 @@ class BlockResource extends JsonResource
             'id' => $this->id,
             'page_id' => $this->page_id,
             'group' => $this->group,
-            'name' => $this->name,
+            'component' => $this->component,
             'order' => $this->order,
             'data' => $this->data,
         ];

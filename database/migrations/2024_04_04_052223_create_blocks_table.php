@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('page_id');
             $table->string('group');
-            $table->string('name');
+            $table->string('component');
             $table->integer('order')->nullable();
             $table->json('data')->nullable();
             $table->timestamps();

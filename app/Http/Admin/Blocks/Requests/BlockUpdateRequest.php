@@ -24,7 +24,7 @@ class BlockUpdateRequest extends FormRequest
     {
         return [
             'group' => 'nullable|string',
-            'name' => 'nullable|string',
+            'component' => 'nullable|string',
             'order' => 'nullable|integer|min:0',
             'data' => 'nullable|array',
         ];
