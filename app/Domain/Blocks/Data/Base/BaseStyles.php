@@ -6,17 +6,17 @@ use Spatie\LaravelData\Optional;
 use Spatie\LaravelData\Data;
 use DDD\Domain\Blocks\Data\Block\Base\BaseBackground;
 
-class BaseSection extends Data
+class BaseStyles extends Data
 {
     public function __construct(
         public string|Optional $theme,
-        public BaseSectionPadding|Optional $padding,
+        public BaseStylesPadding|Optional $padding,
         public BaseBackground|Optional $background,
     ) {
     }
 }
 
-class BaseSectionPadding extends Data
+class BaseStylesPadding extends Data
 {
     public function __construct(
         public string|Optional $paddingTop,
