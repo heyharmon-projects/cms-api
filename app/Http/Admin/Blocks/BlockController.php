@@ -27,6 +27,7 @@ class BlockController extends Controller
 
     public function update(Organization $organization, Website $website, Page $page, Block $block, BlockUpdateRequest $request)
     {
+        // return $request->validated();
         $block->update($request->validated());
 
         return new BlockResource($block);

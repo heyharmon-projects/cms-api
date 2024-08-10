@@ -14,6 +14,5 @@ class HeroData extends Data
         public ?BaseContent $content,
         public ?BaseImage $image,
         public ?BaseStyles $styles,
-    ) {
-    }
+    ) {}
 }

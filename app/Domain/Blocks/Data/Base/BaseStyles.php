@@ -11,7 +11,8 @@ class BaseStyles extends Data
     public function __construct(
         public string|Optional $theme,
         public BaseStylesPadding|Optional $padding,
-        public FileData|Optional $background,
+        // public FileData|Optional $background,
+        public ?BaseImage $background,
     ) {}
 }
 
