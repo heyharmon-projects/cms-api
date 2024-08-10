@@ -43,13 +43,13 @@ class HeroFactory extends Factory
                             'destination' => '/',
                         ],
                     ],
-                    'image' => [
-                        'file' => [
-                            'id' => 1,
-                        ],
-                        'overlay' => true,
+                ],
+                'image' => [
+                    'file' => [
+                        'id' => 1,
                     ],
-                ]
+                    'overlay' => true,
+                ],
             ],
         ];
     }

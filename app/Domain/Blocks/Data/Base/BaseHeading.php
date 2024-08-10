@@ -9,8 +9,10 @@ class BaseHeading extends Data
 {
     public function __construct(
         public string|Optional $tag,
-        public string $text = 'The heading text',
+        public ?string $text,
         public string|Optional $size,
     ) {
+        // Mutate empty values
+        $this->text = $text ?? 'The heading text';
     }
 }

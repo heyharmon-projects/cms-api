@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
             $table->foreignId('website_id');
+            $table->boolean('is_published')->default(false);
             $table->string('title');
             $table->string('path');
             $table->timestamps();

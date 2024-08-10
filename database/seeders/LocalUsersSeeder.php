@@ -20,6 +20,13 @@ class LocalUsersSeeder extends Seeder
                 'organization_id' => 1,
                 'password' => bcrypt(config('seeding.user_password')),
             ],
+            [
+                'name' => 'Jane Doe',
+                'email' => 'jane@doe.com',
+                'role' => 'editor',
+                'organization_id' => 1,
+                'password' => bcrypt(config('seeding.user_password')),
+            ],
         ];
 
         foreach ($users as $user) {

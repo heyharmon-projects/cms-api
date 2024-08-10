@@ -2,23 +2,20 @@
 
 namespace DDD\Domain\Files\Data;
 
+use Spatie\LaravelData\Optional;
 use Spatie\LaravelData\Data;
-use Spatie\LaravelData\Attributes\Computed;
 use DDD\Domain\Base\Files\File;
 
 class FileData extends Data
 {
-    #[Computed]
-    public string $name;
-    public string $filename;
-    public string $path;
-    public string $extension;
-
     public function __construct(
         public int $id,
+        public string|Optional $name,
+        public string|Optional $filename,
+        public string|Optional $path,
+        public string|Optional $extension,
     ) {
         $file = File::find($id);
-        
         $this->name = $file->name;
         $this->filename = $file->filename;
         $this->path = $file->path;

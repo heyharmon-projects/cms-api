@@ -18,7 +18,7 @@ class BlockData implements CastsAttributes
      */
     public function get($model, $key, $value, $attributes)
     {
-        $value = is_array($value) ? $value : json_decode($value, true);
+        $value = is_array($value) ? $value : json_decode($value, true); // To array
 
         return ($model->dataClass()::from($value));
     }
@@ -34,8 +34,10 @@ class BlockData implements CastsAttributes
      */
     public function set($model, $key, $value, $attributes)
     {
-        $value = !is_array($value) ? $value : json_encode($value);
-        
-        return $value;
+        // $value = !is_array($value) ? $value : json_encode($value); // To string
+        // return $value;
+
+        $data = $model->dataClass()::from($value)->toArray(); // DTO to array
+        return json_encode($data); // To string
     }
 }
