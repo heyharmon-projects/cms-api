@@ -1,12 +1,12 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Columns;
+namespace DDD\Domain\Blocks\Data\Cards;
 
 use Spatie\LaravelData\Data;
 use DDD\Domain\Blocks\Data\Base\BaseImage;
 use DDD\Domain\Blocks\Data\Base\BaseContent;
 
-class ColumnsItemData extends Data
+class CardsItemData extends Data
 {
     public function __construct(
         public ?BaseContent $content,
