@@ -12,11 +12,10 @@ class ColumnsData extends Data
 {
     /**
      * Deignate collections of data objects
-     * @property ColumnItem[] $collection
+     * @property ColumnsItemData[] $collection
      */
     public function __construct(
         public ?array $columns,
-        // public ?BaseContentCollection $collection,
         public ?BaseWrapper $wrapper,
         public ?BaseContent $content,
     ) {}
