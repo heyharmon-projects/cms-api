@@ -16,7 +16,7 @@ class ColumnsData extends Data
     //  */
     /**
      * Deignate collections of data objects
-     * @property BaseContentCollection[] $collection
+     * @property ColumnItem[] $collection
      */
     public function __construct(
         public ?array $collection,
