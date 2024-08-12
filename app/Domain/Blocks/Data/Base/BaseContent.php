@@ -15,20 +15,10 @@ class BaseContent extends Data
      * @property BaseButton[] $buttons
      */
     public function __construct(
-        // public string|Optional $alignment,
-        // public BaseText|Optional $pretitle,
-        // public BaseHeading|Optional $title,
-        // public BaseText|Optional $body,
-        // public ?array $buttons,
-        
         public string|Optional $alignment,
         public BaseText|Optional $pretitle,
         public BaseHeading|Optional $title,
         public BaseText|Optional $body,
         public array|Optional $buttons,
-    ) {
-        // Mutate empty values
-        // $this->alignment = $alignment ?? 'left';
-        // $this->buttons = $buttons ?? [];
-    }
+    ) {}
 }

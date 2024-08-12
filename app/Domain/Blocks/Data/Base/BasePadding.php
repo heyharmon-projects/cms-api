@@ -10,6 +10,5 @@ class BasePadding extends Data
     public function __construct(
         public string|Optional $top,
         public string|Optional $bottom,
-    ) {
-    }
+    ) {}
 }

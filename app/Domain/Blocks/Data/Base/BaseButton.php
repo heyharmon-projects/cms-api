@@ -15,7 +15,7 @@ class BaseButton extends Data
         public string|Optional $icon,
     ) {
         // Mutate empty values
-        $this->label = $label ?? 'Button label';
+        $this->label = $label ?? 'Button';
         $this->destination = $destination ?? '/';
     }
 }

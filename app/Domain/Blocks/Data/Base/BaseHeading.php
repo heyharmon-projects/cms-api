@@ -11,8 +11,5 @@ class BaseHeading extends Data
         public string|Optional $tag,
         public ?string $text,
         public string|Optional $size,
-    ) {
-        // Mutate empty values
-        // $this->text = $text ?? 'The heading text';
-    }
+    ) {}
 }

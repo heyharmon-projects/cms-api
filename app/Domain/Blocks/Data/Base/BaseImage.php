@@ -12,6 +12,5 @@ class BaseImage extends Data
         public ?FileData $file,
         public string|Optional $width,
         public string|Optional $height,
-    ) {
-    }
+    ) {}
 }
