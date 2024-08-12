@@ -10,16 +10,12 @@ use DDD\Domain\Blocks\Data\Base\BaseContent;
 
 class ColumnsData extends Data
 {
-    // /**
-    //  * Deignate collections of data objects
-    //  * @property BaseContent[] $collection
-    //  */
     /**
      * Deignate collections of data objects
      * @property ColumnItem[] $collection
      */
     public function __construct(
-        public ?array $collection,
+        public ?array $columns,
         // public ?BaseContentCollection $collection,
         public ?BaseWrapper $wrapper,
         public ?BaseContent $content,
