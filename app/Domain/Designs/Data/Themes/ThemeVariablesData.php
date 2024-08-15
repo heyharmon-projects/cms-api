@@ -7,14 +7,14 @@ use Spatie\LaravelData\Data;
 class ThemeVariablesData extends Data
 {
     public function __construct(
-        public ?string $wrapperBg,
-        public ?string $pretitleColor,
-        public ?string $titleColor,
-        public ?string $textColor,
-        public ?string $btnPrimaryBg,
-        public ?string $btnPrimaryText,
-        public ?string $btnSecondaryBg,
-        public ?string $btnSecondaryText,
-        public ?string $btnSimpleText,
+        public ?string $wrapperBg = null,
+        public ?string $pretitleColor = null,
+        public ?string $titleColor = null,
+        public ?string $textColor = null,
+        public ?string $btnPrimaryBg = null,
+        public ?string $btnPrimaryText = null,
+        public ?string $btnSecondaryBg = null,
+        public ?string $btnSecondaryText = null,
+        public ?string $btnSimpleText = null,
     ) {}
 }

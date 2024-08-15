@@ -5,6 +5,7 @@ namespace DDD\Domain\Websites;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use DDD\Domain\Pages\Page;
+use DDD\Domain\Designs\Design;
 use DDD\App\Traits\BelongsToOrganization;
 
 class Website extends Model
@@ -24,5 +25,15 @@ class Website extends Model
     public function pages()
     {
         return $this->hasMany(Page::class);
+    }
+
+    /**
+     * Design assigned to this website.
+     *
+     * @return belongsTo
+     */
+    public function design()
+    {
+        return $this->belongsTo(Design::class);
     }
 }

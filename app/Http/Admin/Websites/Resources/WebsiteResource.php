@@ -4,6 +4,7 @@ namespace DDD\Http\Admin\Websites\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Request;
+use DDD\Http\Admin\Designs\Resources\DesignResource;
 
 class WebsiteResource extends JsonResource
 {
@@ -17,6 +18,7 @@ class WebsiteResource extends JsonResource
             'organization_id' => $this->organization_id,
             'title' => $this->title,
             'domain' => $this->domain,
+            'design' => new DesignResource($this->design)
         ];
     }
 }

@@ -10,5 +10,7 @@ class ThemeData extends Data
         public ?string $name,
         public ?string $selector,
         public ?ThemeVariablesData $variables,
-    ) {}
+    ) {
+        $this->variables = $variables ?? new ThemeVariablesData(); 
+    }
 }
