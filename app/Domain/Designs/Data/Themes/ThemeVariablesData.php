@@ -4,7 +4,7 @@ namespace DDD\Domain\Designs\Data\Themes;
 
 use Spatie\LaravelData\Data;
 
-class ThemePropertiesData extends Data
+class ThemeVariablesData extends Data
 {
     public function __construct(
         public ?string $wrapperBg,

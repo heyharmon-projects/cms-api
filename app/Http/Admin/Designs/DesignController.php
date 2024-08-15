@@ -11,6 +11,11 @@ use DDD\App\Controllers\Controller;
 
 class DesignController extends Controller
 {
+    public function index(Organization $organization)
+    {
+        return DesignResource::collection($organization->designs);
+    }
+
     public function store(Organization $organization, DesignStoreRequest $request)
     {
         $design = $organization->designs()->create($request->validated());
