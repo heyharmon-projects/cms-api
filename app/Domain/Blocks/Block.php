@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use DDD\Domain\Pages\Page;
 use DDD\Domain\Blocks\Traits\BlockOrderableTrait;
-use DDD\Domain\Blocks\Data\BlockData;
+use DDD\Domain\Blocks\Cast\BlockDataCast;
 
 class Block extends Model
 {
@@ -24,7 +24,7 @@ class Block extends Model
      * @return array<string, string>
      */
     protected $casts = [
-        'data' => BlockData::class,
+        'data' => BlockDataCast::class,
     ];
 
     /**

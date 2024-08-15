@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('website_id');
+            $table->foreignId('website_id')->onDelete('cascade');
             $table->boolean('is_published')->default(false);
             $table->string('title');
             $table->string('path');

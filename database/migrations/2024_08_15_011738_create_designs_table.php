@@ -8,23 +8,27 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('websites', function (Blueprint $table) {
+        Schema::create('designs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('organization_id')->onDelete('cascade');
-            $table->string('title')->nullable();
-            $table->string('domain')->unique();
+            $table->string('name');
+            $table->json('data')->nullable();
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('websites');
+        Schema::dropIfExists('designs');
     }
 };

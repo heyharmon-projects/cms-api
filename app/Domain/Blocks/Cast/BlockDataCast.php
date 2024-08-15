@@ -1,10 +1,10 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data;
+namespace DDD\Domain\Blocks\Cast;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
-class BlockData implements CastsAttributes
+class BlockDataCast implements CastsAttributes
 {
 
     /**

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('blocks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('page_id');
+            $table->foreignId('page_id')->onDelete('cascade');
             $table->string('group');
             $table->string('component');
             $table->integer('order')->nullable();
