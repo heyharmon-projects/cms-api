@@ -6,13 +6,13 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use DDD\Domain\Pages\Page;
-use DDD\Domain\Blocks\Traits\BlockOrderableTrait;
 use DDD\Domain\Blocks\Cast\BlockDataCast;
+use DDD\App\Traits\IsSortable;
 
 class Block extends Model
 {
     use HasFactory,
-        BlockOrderableTrait;
+        IsSortable;
 
     protected $guarded = [
         'id',

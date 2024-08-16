@@ -3,26 +3,32 @@
 namespace DDD\App\Traits;
 
 use ArrayAccess;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use InvalidArgumentException;
+
+/**
+ * Requirements:
+ * 
+ * 1. Model must have an 'order' column.
+ * 2. Model must have a 'buildSortQuery' method.
+ */
 
 trait IsSortable
 {
     protected static function bootIsSortable(): void
     {
         static::creating(function (Model $model) {
-            $model->setHighestOrderNumber();
+            if (!request()->order) {
+                $model->setHighestOrderNumber();
+            }
         });
 
-        // static::created(function (Model $model) {
-        //     $model->reorder(0);
-        // });
-
-        // static::deleting(function (Model $model) {
-        //     $model->order = 0;
-        // });
+        static::updating(function (Model $model) {
+            if (request()->order) {
+                $model->reorder(request()->order);
+            }
+        });
     }
 
     public function setHighestOrderNumber(): void
@@ -43,33 +49,7 @@ trait IsSortable
         $this->setNewOrder($ids);
     }
 
-    public function buildSortQuery(): Collection
-    {
-        // Check if model is nestable
-        if (array_key_exists('parent_id', $this->attributes)) {
-            if ($this->parent_id) {
-                // Model has siblings to be ordered amongst
-                return $this
-                    ->siblings()
-                    ->orderBy('order')
-                    ->get();
-            } else {
-                // Model is a top level parent to be modeled amongst
-                return static::query()
-                    ->where('organization_id', $this->organization->id)
-                    ->where('parent_id', null)
-                    ->orderBy('order')
-                    ->get();
-            }
-        }
-
-        return static::query()
-            ->where('organization_id', $this->organization->id)
-            ->orderBy('order')
-            ->get();
-    }
-
-    public static function setNewOrder($ids, int $startOrder = 1, ?string $primaryKeyColumn = null): void
+    public static function setNewOrder($ids, int $startOrder = 1, string $primaryKeyColumn = null): void
     {
         if (! is_array($ids) && ! $ids instanceof ArrayAccess) {
             throw new InvalidArgumentException('You must pass an array or ArrayAccess object to setNewOrder');
