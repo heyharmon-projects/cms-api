@@ -43,13 +43,13 @@ trait BlockOrderableTrait
         $this->setNewOrder($ids);
     }
 
-    public function buildSortQuery(): Collection
-    {
-        return static::query()
-            ->where('page_id', $this->page->id)
-            ->orderBy('order')
-            ->get();
-    }
+    // public function buildSortQuery(): Collection
+    // {
+    //     return static::query()
+    //         ->where('page_id', $this->page->id)
+    //         ->orderBy('order')
+    //         ->get();
+    // }
 
     public static function setNewOrder($ids, int $startOrder = 1, string $primaryKeyColumn = null): void
     {

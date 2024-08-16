@@ -19,6 +19,19 @@ class Block extends Model
     ];
 
     /**
+     * The query used when sorting page blocks.
+     *
+     * @return Collection
+     */
+    public function buildSortQuery()
+    {
+        return static::query()
+            ->where('page_id', $this->page->id)
+            ->orderBy('order')
+            ->get();
+    }
+
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>

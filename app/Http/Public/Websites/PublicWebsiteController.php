@@ -17,25 +17,33 @@ class PublicWebsiteController extends Controller
 
         $content = '
             :root {
-                --primary: #32473b;
-                --secondary: #ff7200;
-                --tertiary: #c7e5fc;
-                --neutral: #f5f5f5;
-                --black: #000000;
-                --grey: #808080;
-                --white: #ffffff;
+            --primary: navy;
+            --secondary: black;
+            --white: white;
             }
 
             :root {
-                --wrapper-bg: var(--neutral);
-                --pretitle-color: var(--secondary);
-                --title-color: var(--primary);
-                --text-color: var(--primary);
-                --btn-primary-bg: var(--secondary);
-                --btn-primary-text: var(--white);
-                --btn-secondary-bg: var(--primary);
-                --btn-secondary-text: var(--white);
-                --btn-simple-text: var(--primary);
+            --wrapperBg: var(--white);
+            --pretitleColor: var(--primary);
+            --titleColor: var(--secondary);
+            --textColor: var(--secondary);
+            --btnPrimaryBg: var(--primary);
+            --btnPrimaryText: var(--white);
+            --btnSecondaryBg: var(--secondary);
+            --btnSecondaryText: var(--white);
+            --btnSimpleText: var(--secondary);
+            }
+
+            [data-theme="Dark"] {
+            --wrapperBg: var(--primary);
+            --pretitleColor: var(--white);
+            --titleColor: var(--white);
+            --textColor: var(--white);
+            --btnPrimaryBg: var(--white);
+            --btnPrimaryText: var(--primary);
+            --btnSecondaryBg: var(--secondary);
+            --btnSecondaryText: var(--white);
+            --btnSimpleText: var(--white);
             }
         ';
 
