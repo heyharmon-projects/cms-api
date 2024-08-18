@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use DDD\Domain\Websites\Website;
 
-class WebsiteSeeder extends Seeder
+class LocalWebsiteSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,8 +15,13 @@ class WebsiteSeeder extends Seeder
         $websites = [
             [
                 'organization_id' => 1,
-                'title' => 'Primary Website',
-                'domain' => 'metrifi.com',
+                'title' => 'Main Website',
+                'domain' => 'acme.com',
+            ],
+            [
+                'organization_id' => 1,
+                'title' => 'Blog',
+                'domain' => 'blog.acme.com',
             ],
         ];
 

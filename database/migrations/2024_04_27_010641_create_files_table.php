@@ -15,11 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('organization_id');
             $table->foreignId('user_id');
-            $table->string('name');
+            // $table->string('name');
             $table->string('filename');
-            $table->string('path');
+            // $table->string('path');
             $table->string('extension');
-            $table->string('mime');
             $table->string('disk');
             $table->timestamps();
 

@@ -8,14 +8,12 @@ use DDD\Http\Base\Auth\AuthPasswordResetController;
 use DDD\Http\Base\Auth\AuthRegisterController;
 use DDD\Http\Base\Auth\AuthRegisterWithInvitationController;
 use DDD\Http\Base\Categories\CategoryController;
-use DDD\Http\Base\Files\FileController;
-use DDD\Http\Base\Files\FileDownloadController;
 use DDD\Http\Base\Invitations\InvitationController;
-use DDD\Http\Base\Organizations\OrganizationController;
-use DDD\Http\Base\Subscriptions\Intent\IntentController;
-use DDD\Http\Base\Subscriptions\Plans\PlanController;
-use DDD\Http\Base\Subscriptions\Plans\PlanSwapAvailabilityController;
-use DDD\Http\Base\Subscriptions\Subscriptions\SubscriptionController;
+// use DDD\Http\Base\Organizations\OrganizationController;
+// use DDD\Http\Base\Subscriptions\Intent\IntentController;
+// use DDD\Http\Base\Subscriptions\Plans\PlanController;
+// use DDD\Http\Base\Subscriptions\Plans\PlanSwapAvailabilityController;
+// use DDD\Http\Base\Subscriptions\Subscriptions\SubscriptionController;
 use DDD\Http\Base\Tags\TagController;
 use DDD\Http\Base\Teams\TeamController;
 use DDD\Http\Base\Users\UserController;
@@ -30,9 +28,6 @@ Route::post('auth/password/reset', AuthPasswordResetController::class);
 
 // Public - Invitations
 Route::get('{organization:slug}/invitations/{invitation:uuid}', [InvitationController::class, 'show']);
-
-// Public - Files Download
-Route::get('/files/{file}', [FileDownloadController::class, 'download']);
 
 Route::middleware('auth:sanctum')->group(function () {
     // Auth
@@ -57,14 +52,6 @@ Route::middleware('auth:sanctum')->group(function () {
             Route::delete('/{invitation:uuid}', [InvitationController::class, 'destroy']);
         });
 
-        // Files
-        Route::prefix('files')->group(function () {
-            Route::get('/', [FileController::class, 'index']);
-            Route::post('/', [FileController::class, 'store']);
-            Route::get('/files/{file}', [FileController::class, 'show']);
-            Route::delete('/{file}', [FileController::class, 'destroy']);
-        });
-
         // Teams
         Route::prefix('teams')->group(function () {
             Route::get('/', [TeamController::class, 'index']);
@@ -79,13 +66,6 @@ Route::middleware('auth:sanctum')->group(function () {
             Route::get('/', [UserController::class, 'index']);
         });
     });
-
-    // Organizations
-    Route::get('organizations', [OrganizationController::class, 'index']);
-    Route::post('organizations', [OrganizationController::class, 'store']);
-    Route::get('organizations/{organization:slug}', [OrganizationController::class, 'show']);
-    Route::put('organizations/{organization:slug}', [OrganizationController::class, 'update']);
-    Route::delete('organizations/{organization:slug}', [OrganizationController::class, 'destroy']);
 
     // Categories
     Route::prefix('categories')->group(function () {

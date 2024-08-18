@@ -1,6 +1,6 @@
 <?php
 
-namespace DDD\Domain\Base\Files\Resources;
+namespace DDD\Http\Admin\Files\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Request;
@@ -14,12 +14,12 @@ class FileResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
+            // 'name' => $this->name,
             'filename' => $this->filename,
-            'path' => $this->path,
+            // 'path' => $this->path,
             'url' => $this->getStorageUrl(),
             'extension' => $this->extension,
-            'mime' => $this->mime,
+            // 'mime' => $this->mime,
         ];
     }
 }

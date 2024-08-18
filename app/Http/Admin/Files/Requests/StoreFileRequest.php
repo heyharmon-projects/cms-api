@@ -1,6 +1,6 @@
 <?php
 
-namespace DDD\Domain\Base\Files\Requests;
+namespace DDD\Http\Admin\Files\Requests;
 
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Foundation\Http\FormRequest;

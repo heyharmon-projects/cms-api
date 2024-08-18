@@ -4,7 +4,7 @@ namespace Database\Factories\Domain\Base\Files;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use DDD\Domain\Base\Files\File;
+use DDD\Domain\Files\File;
 
 class FileFactory extends Factory
 {

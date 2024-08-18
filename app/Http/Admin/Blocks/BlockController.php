@@ -20,10 +20,11 @@ class BlockController extends Controller
         return new BlockResource($block);
     }
 
-    // public function show(Organization $organization, Website $website, Page $page, Block $block)
-    // {
-    //     return new BlockResource($block);
-    // }
+    public function show(Organization $organization, Website $website, Page $page, Block $block)
+    {
+        // dd($block);
+        return new BlockResource($block);
+    }
 
     public function update(Organization $organization, Website $website, Page $page, Block $block, BlockUpdateRequest $request)
     {

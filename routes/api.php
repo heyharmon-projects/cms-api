@@ -5,24 +5,22 @@ use DDD\Http\Public\Websites\PublicWebsiteController;
 use DDD\Http\Public\Pages\PublicPageController;
 use DDD\Http\Admin\Websites\WebsiteController;
 use DDD\Http\Admin\Pages\PageController;
+use DDD\Http\Admin\Files\FileDownloadController;
+use DDD\Http\Admin\Files\FileController;
 use DDD\Http\Admin\Designs\DesignController;
 use DDD\Http\Admin\Blocks\BlockController;
 
-// Public: Pages
-Route::prefix('public/{organization:slug}/websites/{website}')->group(function() {
-    Route::get('/pages', [PublicPageController::class, 'show']);
-});
-
-// Public: Websites
-Route::prefix('public/{organization:slug}/websites')->group(function() {
-    Route::get('/{website}', [PublicWebsiteController::class, 'show']);
-});
-
-Route::middleware('auth:sanctum')->group(function() {
+// Admin
+Route::middleware('auth:sanctum')->prefix('admin')->group(function() {
+    // Route::get('organizations', [OrganizationController::class, 'index']);
+    // Route::post('organizations', [OrganizationController::class, 'store']);
+    // Route::get('organizations/{organization:slug}', [OrganizationController::class, 'show']);
+    // Route::put('organizations/{organization:slug}', [OrganizationController::class, 'update']);
+    // Route::delete('organizations/{organization:slug}', [OrganizationController::class, 'destroy']);
     
-    // Admin: Organizations
-    Route::prefix('admin/{organization:slug}')->group(function() {
-
+    // Admin: Organization
+    Route::prefix('{organization:slug}')->group(function() {
+        
         // Admin: Websites
         Route::prefix('websites')->group(function() {
             Route::get('/', [WebsiteController::class, 'index']);
@@ -42,7 +40,7 @@ Route::middleware('auth:sanctum')->group(function() {
                 // Admin: Blocks
                 Route::prefix('{page}/blocks')->group(function() {
                     Route::post('/', [BlockController::class, 'store']);
-                    // Route::get('/{block}', [BlockController::class, 'show']);
+                    Route::get('/{block}', [BlockController::class, 'show']);
                     Route::put('/{block}', [BlockController::class, 'update']);
                     Route::delete('/{block}', [BlockController::class, 'destroy']);
                 });
@@ -57,5 +55,26 @@ Route::middleware('auth:sanctum')->group(function() {
             Route::put('/{design}', [DesignController::class, 'update']);
             Route::delete('/{design}', [DesignController::class, 'destroy']);
         });
+
+        // Files
+        Route::prefix('files')->group(function () {
+            Route::get('/', [FileController::class, 'index']);
+            Route::post('/', [FileController::class, 'store']);
+            Route::get('/files/{file}', [FileController::class, 'show']);
+            Route::delete('/{file}', [FileController::class, 'destroy']);
+        });
+    });
+});
+
+// Public
+Route::prefix('public')->group(function() {
+    // Public: Website
+    Route::prefix('{organization:slug}/websites')->group(function() {
+        Route::get('/{website}', [PublicWebsiteController::class, 'show']);
+    });
+    
+    // Public: Page
+    Route::prefix('{organization:slug}/websites/{website}')->group(function() {
+        Route::get('/pages', [PublicPageController::class, 'show']);
     });
 });

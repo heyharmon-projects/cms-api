@@ -48,14 +48,6 @@ class Organization extends Model
     }
 
     /**
-     * Files associated with the organization.
-     */
-    public function files(): HasMany
-    {
-        return $this->hasMany(\DDD\Domain\Base\Files\File::class);
-    }
-
-    /**
      * Teams that belong to this team.
      */
     public function teams(): HasMany
