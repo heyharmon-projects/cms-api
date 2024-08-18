@@ -11,22 +11,16 @@ class StoreFileFromUrlAction
 {
     use AsAction;
     
-    function handle(String $url, Organization $organization)
+    function handle(Organization $organization, String $url)
     {
         $disk = config('filesystems.default');
-
-        // $folder = $organization->slug;
 
         $fileInfo = pathinfo($url); // Get parts of the URL
         $filename = $fileInfo['basename']; // dog.jpg
         $extension = $fileInfo['extension']; // jpg
-        
-        // $filename = basename($url) . '.' . $extension;
 
         try {
             Storage::put($filename, file_get_contents($url));
-
-            // $path = Storage::path($folder . '/' . $name);
 
             $file = File::updateOrCreate(
                 [
@@ -34,12 +28,10 @@ class StoreFileFromUrlAction
                 ],
                 [
                     'organization_id' => $organization->id,
-                    // 'path' => $path,
-                    // 'name' => $name,
+                    // 'title' => $title,
                     'filename' => $filename,
                     'extension' => $extension,
                     'disk' => $disk,
-                    // 'folder' => $folder
                 ]
             );
 

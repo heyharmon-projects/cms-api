@@ -16,19 +16,19 @@ class UpdateFileAction
         $disk = config('filesystems.default');
         
         // Store new file in storage
-        $newPath = $updatedFile->store($file->folder, $disk);
+        $filename = $updatedFile->store();
+
+        // $title = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
 
         // Remove old file storage
-        Storage::disk($disk)->delete($file->path);
+        Storage::disk($disk)->delete($file->filename);
         
         // Update file
         $file->update([
-            'path' => $newPath,
-            'name' => pathinfo($updatedFile->getClientOriginalName(), PATHINFO_FILENAME),
-            'filename' => basename($newPath),
+            // 'title' => $title,
+            'filename' => $filename,
             'extension' => $updatedFile->getClientOriginalExtension(),
             'disk' => $disk,
-            'folder' => $updatedFile->folder
         ]);
 
         return $file;

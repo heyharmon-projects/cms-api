@@ -10,28 +10,27 @@ class StoreFileAction
 {
     use AsAction;
     
-    function handle($file, Organization $organization)
+    function handle(Organization $organization, $file)
     {
         $disk = config('filesystems.default');
         
-        $path = $file->store();
+        $filename = $file->store();
 
-        $filename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+        // $title = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
 
-        $newFile = File::updateOrCreate(
+        $fileRecord = File::updateOrCreate(
             [
                 'filename' => $filename
             ],
             [
                 'organization_id' => $organization->id,
-                // 'name' => ,
-                // 'path' => $path,
+                // 'title' => $title,
                 'filename' => $filename,
                 'extension' => $file->getClientOriginalExtension(),
                 'disk' => $disk,
             ]
         );
 
-        return $newFile;
+        return $fileRecord;
     }
 }

@@ -56,11 +56,12 @@ Route::middleware('auth:sanctum')->prefix('admin')->group(function() {
             Route::delete('/{design}', [DesignController::class, 'destroy']);
         });
 
-        // Files
+        // Admin: Files
         Route::prefix('files')->group(function () {
             Route::get('/', [FileController::class, 'index']);
             Route::post('/', [FileController::class, 'store']);
-            Route::get('/files/{file}', [FileController::class, 'show']);
+            Route::get('/{file}', [FileController::class, 'show']);
+            Route::post('/{file}', [FileController::class, 'update']);
             Route::delete('/{file}', [FileController::class, 'destroy']);
         });
     });
