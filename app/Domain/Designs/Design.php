@@ -16,11 +16,6 @@ class Design extends Model
         'id',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
     protected $casts = [
         'data' => DesignDataCast::class,
     ];

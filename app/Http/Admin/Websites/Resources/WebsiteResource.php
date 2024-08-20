@@ -18,7 +18,8 @@ class WebsiteResource extends JsonResource
             'organization_id' => $this->organization_id,
             'title' => $this->title,
             'domain' => $this->domain,
-            'design' => new DesignResource($this->design)
+            'settings' => $this->settings,
+            'design' => new DesignResource($this->design),
         ];
     }
 }

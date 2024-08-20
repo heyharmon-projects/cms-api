@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('organization_id')->onDelete('cascade');
             $table->string('title')->nullable();
             $table->string('domain')->unique();
+            $table->json('settings')->nullable();
             $table->timestamps();
         });
     }
