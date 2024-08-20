@@ -19,8 +19,8 @@ class FileData extends Data
     ) {
         $file = File::find($id);
         // $this->name = $file->name;
-        $this->filename = $file->filename;
+        $this->filename = $file->filename ?? '';
         // $this->path = $file->path;
-        $this->extension = $file->extension;
+        $this->extension = $file->extension ?? '';
     }
 }
