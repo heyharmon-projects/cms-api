@@ -9,8 +9,6 @@ class ThemeData extends Data
     public function __construct(
         public ?string $name,
         public ?string $selector,
-        public ?ThemeVariablesData $variables,
-    ) {
-        $this->variables = $variables ?? new ThemeVariablesData(); 
-    }
+        public ?ThemeVariablesData $variables = new ThemeVariablesData(),
+    ) {}
 }

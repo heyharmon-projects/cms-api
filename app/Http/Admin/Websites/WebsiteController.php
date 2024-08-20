@@ -29,7 +29,7 @@ class WebsiteController extends Controller
 
     public function show(Organization $organization, Website $website)
     {
-        $website = $website->load('pages');
+        // $website = $website->load('pages');
         
         return new WebsiteResource($website);
     }

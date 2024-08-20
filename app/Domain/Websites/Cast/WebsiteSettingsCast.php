@@ -3,8 +3,7 @@
 namespace DDD\Domain\Websites\Cast;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
-use DDD\Domain\Designs\Data\DesignData;
-
+use DDD\Domain\Websites\Data\WebsiteSettingsData;
 class WebsiteSettingsCast implements CastsAttributes
 {
 
@@ -21,7 +20,7 @@ class WebsiteSettingsCast implements CastsAttributes
     {
         $value = is_array($value) ? $value : json_decode($value, true); // To array
 
-        return DesignData::from($value);
+        return WebsiteSettingsData::from($value);
     }
 
     /**
@@ -38,7 +37,7 @@ class WebsiteSettingsCast implements CastsAttributes
         // $value = !is_array($value) ? $value : json_encode($value); // To string
         // return $value;
 
-        $data = DesignData::from($value)->toArray(); // DTO to array
+        $data = WebsiteSettingsData::from($value)->toArray(); // DTO to array
         return json_encode($data); // To string
     }
 }
