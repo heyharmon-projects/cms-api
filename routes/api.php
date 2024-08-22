@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use DDD\Http\Public\Websites\PublicWebsiteStylesheetController;
 use DDD\Http\Public\Websites\PublicWebsiteController;
 use DDD\Http\Public\Pages\PublicPageController;
 use DDD\Http\Admin\Websites\WebsiteController;
@@ -9,6 +10,22 @@ use DDD\Http\Admin\Files\FileDownloadController;
 use DDD\Http\Admin\Files\FileController;
 use DDD\Http\Admin\Designs\DesignController;
 use DDD\Http\Admin\Blocks\BlockController;
+
+// Public
+Route::prefix('public')->group(function() {
+    // Public: Website
+    Route::prefix('{organization:slug}/websites')->group(function() {
+        Route::get('/{website}', [PublicWebsiteController::class, 'show']);
+
+        // Public: Website Stylesheet
+        Route::get('/{website}/stylesheet', [PublicWebsiteStylesheetController::class, 'show']);
+    });
+    
+    // Public: Page
+    Route::prefix('{organization:slug}/websites/{website}')->group(function() {
+        Route::get('/pages', [PublicPageController::class, 'show']);
+    });
+});
 
 // Admin
 Route::middleware('auth:sanctum')->prefix('admin')->group(function() {
@@ -64,18 +81,5 @@ Route::middleware('auth:sanctum')->prefix('admin')->group(function() {
             Route::post('/{file}', [FileController::class, 'update']);
             Route::delete('/{file}', [FileController::class, 'destroy']);
         });
-    });
-});
-
-// Public
-Route::prefix('public')->group(function() {
-    // Public: Website
-    Route::prefix('{organization:slug}/websites')->group(function() {
-        Route::get('/{website}', [PublicWebsiteController::class, 'show']);
-    });
-    
-    // Public: Page
-    Route::prefix('{organization:slug}/websites/{website}')->group(function() {
-        Route::get('/pages', [PublicPageController::class, 'show']);
     });
 });

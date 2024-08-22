@@ -17,6 +17,7 @@ class PublicWebsiteResource extends JsonResource
             'organization_id' => $this->organization_id,
             'title' => $this->title,
             'domain' => $this->domain,
+            'settings' => $this->settings,
         ];
     }
 }
