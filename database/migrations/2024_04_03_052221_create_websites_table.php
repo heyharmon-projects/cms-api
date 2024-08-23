@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('domain')->unique();
             $table->json('settings')->nullable();
+            $table->json('design')->nullable();
             $table->timestamps();
         });
     }

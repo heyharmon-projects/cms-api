@@ -1,10 +1,10 @@
 <?php
 
-namespace DDD\Domain\Websites\Data;
+namespace DDD\Domain\Websites\Data\Settings;
 
 use Spatie\LaravelData\Data;
-use DDD\Domain\Websites\Data\Navbar\NavbarData;
-use DDD\Domain\Websites\Data\Footer\FooterData;
+use DDD\Domain\Websites\Data\Settings\Navbar\NavbarData;
+use DDD\Domain\Websites\Data\Settings\Footer\FooterData;
 use DDD\Domain\Blocks\Data\Base\BaseImage;
 
 class WebsiteSettingsData extends Data

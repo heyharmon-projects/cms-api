@@ -1,11 +1,11 @@
 <?php
 
-namespace DDD\Domain\Websites\Data\Navbar;
+namespace DDD\Domain\Websites\Data\Settings\Footer;
 
 use Spatie\LaravelData\Data;
 use DDD\Domain\Blocks\Data\Base\BaseImage;
 
-class NavbarData extends Data
+class FooterData extends Data
 {
     public function __construct(
         public ?BaseImage $logo = null,
