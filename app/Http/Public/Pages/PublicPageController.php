@@ -10,7 +10,7 @@ use DDD\App\Controllers\Controller;
 
 class PublicPageController extends Controller
 {
-    public function show(Organization $organization, Website $website, Request $request)
+    public function show(Website $website, Request $request)
     {
         $page = $website->pages()
             ->where('path', $request['path'])

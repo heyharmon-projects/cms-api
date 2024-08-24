@@ -14,9 +14,9 @@ class PublicWebsiteResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'organization_id' => $this->organization_id,
+            // 'organization_id' => $this->organization_id,
             'title' => $this->title,
-            'domain' => $this->domain,
+            // 'domain' => $this->domain,
             'settings' => $this->settings,
         ];
     }

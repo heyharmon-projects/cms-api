@@ -8,7 +8,7 @@ use DDD\App\Controllers\Controller;
 
 class PublicWebsiteStylesheetController extends Controller
 {
-    public function show(Organization $organization, Website $website)
+    public function show(Website $website)
     {
         // $website = $website->load('settings');
         
