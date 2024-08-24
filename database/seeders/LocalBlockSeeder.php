@@ -79,7 +79,7 @@ class LocalBlockSeeder extends Seeder
             ],
             [
                 'page_id' => 1,
-                'group' => 'Review',
+                'group' => 'Reviews',
                 'component' => 'Review',
                 'order' => 5,
                 'data' => json_decode('{"wrapper": {"image": null, "theme": "Light"}, "review": {"extra": {"text": "Salt Lake City"}, "image": {"file": {"id": 13}}, "quote": {"text": "\"Anthony and his team washed my whole house. They did awesome work at such a good price. 100% recommend.\""}, "author": {"text": "John D."}}}', true),

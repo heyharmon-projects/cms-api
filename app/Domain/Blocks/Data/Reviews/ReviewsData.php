@@ -1,12 +1,12 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Review;
+namespace DDD\Domain\Blocks\Data\Reviews;
 
 use Spatie\LaravelData\Data;
-use DDD\Domain\Blocks\Data\Review\Review;
+use DDD\Domain\Blocks\Data\Reviews\Review;
 use DDD\Domain\Blocks\Data\Base\BaseWrapper;
 
-class ReviewData extends Data
+class ReviewsData extends Data
 {
     public function __construct(
         public ?Review $review,

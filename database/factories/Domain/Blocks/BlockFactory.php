@@ -38,7 +38,7 @@ class BlockFactory extends Factory
             ['group' => 'Feature',      'name' => 'Feature'],
             ['group' => 'Feature',      'name' => 'FeatureRepeater'],
             ['group' => 'Hero',         'name' => 'Hero'],
-            ['group' => 'Review',  'name' => 'Review'],
+            ['group' => 'Reviews',      'name' => 'Review'],
         ];
 
         shuffle($blocks);

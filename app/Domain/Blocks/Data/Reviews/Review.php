@@ -1,6 +1,6 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Review;
+namespace DDD\Domain\Blocks\Data\Reviews;
 
 use Spatie\LaravelData\Optional;
 use Spatie\LaravelData\Data;
