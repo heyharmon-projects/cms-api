@@ -10,7 +10,7 @@ class CardsData extends Data
 {
     /**
      * Deignate collections of data objects
-     * @property CardsItemData[] $columns
+     * @property Card[] $columns
      */
     public function __construct(
         public ?array $columns,
