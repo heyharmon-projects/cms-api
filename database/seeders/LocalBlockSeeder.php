@@ -43,10 +43,10 @@ class LocalBlockSeeder extends Seeder
             // ],
             // [
             //     'page_id' => 1,
-            //     'group' => 'Testimonial',
-            //     'component' => 'Testimonial',
+            //     'group' => 'Review',
+            //     'component' => 'Review',
             //     'order' => 5,
-            //     'data' => json_decode('{"wrapper": {"image": null, "theme": "Light"}, "testimonial": {"extra": {"text": "Salt Lake City"}, "image": {"file": {"id": 13, "name": "jon-grogan-yfTFo4iaADI-unsplash", "path": "acme/kGRz9gB96QT8aGzK2OH5xp3xMyL0Ys5Budk8COQz.jpg", "filename": "kGRz9gB96QT8aGzK2OH5xp3xMyL0Ys5Budk8COQz.jpg", "extension": "jpg"}}, "quote": {"text": "\"Anthony and his team washed my whole house. They did awesome work at such a good price. 100% recommend.\""}, "author": {"text": "John D."}}}', true),
+            //     'data' => json_decode('{"wrapper": {"image": null, "theme": "Light"}, "review": {"extra": {"text": "Salt Lake City"}, "image": {"file": {"id": 13, "name": "jon-grogan-yfTFo4iaADI-unsplash", "path": "acme/kGRz9gB96QT8aGzK2OH5xp3xMyL0Ys5Budk8COQz.jpg", "filename": "kGRz9gB96QT8aGzK2OH5xp3xMyL0Ys5Budk8COQz.jpg", "extension": "jpg"}}, "quote": {"text": "\"Anthony and his team washed my whole house. They did awesome work at such a good price. 100% recommend.\""}, "author": {"text": "John D."}}}', true),
             // ],
 
             [
@@ -79,10 +79,10 @@ class LocalBlockSeeder extends Seeder
             ],
             [
                 'page_id' => 1,
-                'group' => 'Testimonial',
-                'component' => 'Testimonial',
+                'group' => 'Review',
+                'component' => 'Review',
                 'order' => 5,
-                'data' => json_decode('{"wrapper": {"image": null, "theme": "Light"}, "testimonial": {"extra": {"text": "Salt Lake City"}, "image": {"file": {"id": 13}}, "quote": {"text": "\"Anthony and his team washed my whole house. They did awesome work at such a good price. 100% recommend.\""}, "author": {"text": "John D."}}}', true),
+                'data' => json_decode('{"wrapper": {"image": null, "theme": "Light"}, "review": {"extra": {"text": "Salt Lake City"}, "image": {"file": {"id": 13}}, "quote": {"text": "\"Anthony and his team washed my whole house. They did awesome work at such a good price. 100% recommend.\""}, "author": {"text": "John D."}}}', true),
             ],
 
             // [
@@ -115,10 +115,10 @@ class LocalBlockSeeder extends Seeder
             // ],
             // [
             //     'page_id' => 1,
-            //     'group' => 'Testimonial',
-            //     'component' => 'Testimonial',
+            //     'group' => 'Review',
+            //     'component' => 'Review',
             //     'order' => 5,
-            //     'data' => json_decode('{"wrapper": {"theme": "Light"}, "testimonial": {"extra": {"text": "Salt Lake City"}, "image": {"file": {"id": 13}}, "quote": {"text": "\"Anthony and his team washed my whole house. They did awesome work at such a good price. 100% recommend.\""}, "author": {"text": "John D."}}}', true),
+            //     'data' => json_decode('{"wrapper": {"theme": "Light"}, "review": {"extra": {"text": "Salt Lake City"}, "image": {"file": {"id": 13}}, "quote": {"text": "\"Anthony and his team washed my whole house. They did awesome work at such a good price. 100% recommend.\""}, "author": {"text": "John D."}}}', true),
             // ],
         ];
 

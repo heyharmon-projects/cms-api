@@ -1,13 +1,13 @@
 <?php
 
-namespace DDD\Domain\Blocks\Data\Testimonial;
+namespace DDD\Domain\Blocks\Data\Review;
 
 use Spatie\LaravelData\Optional;
 use Spatie\LaravelData\Data;
 use DDD\Domain\Blocks\Data\Base\BaseText;
 use DDD\Domain\Blocks\Data\Base\BaseImage;
 
-class Testimonial extends Data
+class Review extends Data
 {
     public function __construct(
         public BaseText|Optional $quote,
