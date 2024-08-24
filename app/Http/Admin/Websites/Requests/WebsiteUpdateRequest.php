@@ -24,6 +24,7 @@ class WebsiteUpdateRequest extends FormRequest
     {
         return [
             'title' => 'nullable|string',
+            'slug' => 'nullable|string',
             'domain' => 'nullable|string',
             'settings' => 'nullable|array',
             'design' => 'nullable|array',

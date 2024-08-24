@@ -8,11 +8,13 @@ use DDD\Domain\Websites\Cast\WebsiteSettingsCast;
 use DDD\Domain\Websites\Cast\WebsiteDesignCast;
 use DDD\Domain\Pages\Page;
 use DDD\Domain\Designs\Design;
+use DDD\App\Traits\HasSlug;
 use DDD\App\Traits\BelongsToOrganization;
 
 class Website extends Model
 {
     use BelongsToOrganization,
+        HasSlug,
         HasFactory;
 
     protected $guarded = [

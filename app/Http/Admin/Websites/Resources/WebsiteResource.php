@@ -17,6 +17,7 @@ class WebsiteResource extends JsonResource
             'id' => $this->id,
             'organization_id' => $this->organization_id,
             'title' => $this->title,
+            'slug' => $this->slug,
             'domain' => $this->domain,
             'settings' => $this->settings,
             'design' => $this->design,

@@ -14,15 +14,15 @@ use DDD\Http\Admin\Blocks\BlockController;
 // Public
 Route::prefix('public')->group(function() {
     // Public: Website
-    Route::prefix('{organization:slug}/websites')->group(function() {
-        Route::get('/{website}', [PublicWebsiteController::class, 'show']);
+    Route::prefix('/websites')->group(function() {
+        Route::get('/{website:slug}', [PublicWebsiteController::class, 'show']);
 
         // Public: Website Stylesheet
-        Route::get('/{website}/stylesheet', [PublicWebsiteStylesheetController::class, 'show']);
+        Route::get('/{website:slug}/stylesheet', [PublicWebsiteStylesheetController::class, 'show']);
     });
     
     // Public: Page
-    Route::prefix('{organization:slug}/websites/{website}')->group(function() {
+    Route::prefix('/websites/{website:slug}')->group(function() {
         Route::get('/pages', [PublicPageController::class, 'show']);
     });
 });

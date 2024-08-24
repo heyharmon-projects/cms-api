@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('organization_id')->onDelete('cascade');
             $table->string('title')->nullable();
+            $table->string('slug')->unique();
             $table->string('domain')->unique();
             $table->json('settings')->nullable();
             $table->json('design')->nullable();
