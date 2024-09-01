@@ -42,12 +42,12 @@ Route::middleware('auth:sanctum')->prefix('admin')->group(function() {
         Route::prefix('websites')->group(function() {
             Route::get('/', [WebsiteController::class, 'index']);
             Route::post('/', [WebsiteController::class, 'store']);
-            Route::get('/{website}', [WebsiteController::class, 'show']);
-            Route::put('/{website}', [WebsiteController::class, 'update']);
-            Route::delete('/{website}', [WebsiteController::class, 'destroy']);
+            Route::get('/{website:slug}', [WebsiteController::class, 'show']);
+            Route::put('/{website:slug}', [WebsiteController::class, 'update']);
+            Route::delete('/{website:slug}', [WebsiteController::class, 'destroy']);
 
             // Admin: Pages
-            Route::prefix('{website}/pages')->group(function() {
+            Route::prefix('{website:slug}/pages')->group(function() {
                 Route::get('/', [PageController::class, 'index']);
                 Route::post('/', [PageController::class, 'store']);
                 Route::get('/{page}', [PageController::class, 'show']);

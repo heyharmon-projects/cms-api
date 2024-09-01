@@ -14,40 +14,13 @@ class LocalFileSeeder extends Seeder
     {
         $files = [
             [
-                'filename' => 'dylan-hunter-IE_4GlVAbY8-unsplash.jpg',
+                'filename' => 'placeholder-image-wide.png',
             ],
             [
-                'filename' => 'francesca-tosolini-XcVm8mn7NUM-unsplash.jpg',
+                'filename' => 'placeholder-image-square.png',
             ],
             [
-                'filename' => 'joel-filipe-qi3CsbHCzRU-unsplash.jpg',
-            ],
-            [
-                'filename' => 'kostiantyn-trundaiev-AIljyZlF5ZE-unsplash.jpg',
-            ],
-            [
-                'filename' => 'michael-moloney-oY-Mo5hh3r4-unsplash.jpg',
-            ],
-            [
-                'filename' => 'mkjr_-2zUjvV0M9dQ-unsplash.jpg',
-            ],
-            [
-                'filename' => 'nuno-silva-Rcsa_Rg77Tc-unsplash.jpg',
-            ],
-            [
-                'filename' => 'ryoji-iwata-Fusx3dlbqpw-unsplash.jpg',
-            ],
-            [
-                'filename' => 'the-graphic-space-kLZs4yoR0uU-unsplash.jpg',
-            ],
-            [
-                'filename' => 'thought-catalog-FYTXE6l8VaE-unsplash.jpg',
-            ],
-            [
-                'filename' => 'todd-kent-178j8tJrNlc-unsplash.jpg',
-            ],
-            [
-                'filename' => 'victor-0yL6nXhn0pI-unsplash.jpg',
+                'filename' => 'placeholder-image-tall.png',
             ],
         ];
 
@@ -56,7 +29,7 @@ class LocalFileSeeder extends Seeder
                 'organization_id' => 1,
                 'user_id' => 1,
                 'filename' => $file['filename'],
-                'extension' => 'jpg',
+                'extension' => 'png',
                 'disk' => 'r2',
             ]);
         }

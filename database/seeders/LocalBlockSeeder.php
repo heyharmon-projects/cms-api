@@ -54,14 +54,14 @@ class LocalBlockSeeder extends Seeder
                 'group' => 'Hero',
                 'component' => 'HeroSplitFull',
                 'order' => 1,
-                'data' => json_decode('{"content": {"body": {"text": "The body."}, "title": {"text": "The title"}, "buttons": [{"label": "Button", "destination": "/"}], "pretitle": {"text": "Pretitle"}}, "wrapper": {"image": null, "theme": "default", "overlay": false}, "image": {"file": {"id": 1}}}', true),
+                'data' => json_decode('{"content": {"body": {"text": "The body."}, "title": {"text": "The title"}, "buttons": [{"label": "Button", "destination": "/"}], "pretitle": {"text": "Pretitle"}}, "wrapper": {"image": null, "theme": "default", "overlay": false}, "image": {"file": {"id": 2}}}', true),
             ],
             [
                 'page_id' => 1,
                 'group' => 'Cards',
                 'component' => 'CardsJumbo',
                 'order' => 2,
-                'data' => json_decode('{"columns": [{"image": {"file": {"id": 9}}, "theme": "Dark", "content": {"body": {"text": "Get detailed commercial pressure washing services from Sunday to protect your property and reputation."}, "title": {"text": "Commercial"}, "buttons": [{"label": "Get started", "destination": "/"}], "pretitle": {"text": null}}, "overlay": true}, {"image": {"file": {"id": 2}}, "theme": "Dark", "content": {"body": {"text": "Keep your home clean and impressive with Sunday\'s thorough and customized residential pressure washing services."}, "title": {"text": "Residential"}, "buttons": [{"label": "Get started", "destination": "/"}], "pretitle": {"text": null}}, "overlay": true}], "content": {"body": {"text": null}, "title": {"text": "Washing homes and businesses since 2007"}}, "wrapper": {"image": null, "theme": "root", "overlay": false}}', true),
+                'data' => json_decode('{"columns": [{"image": {"file": {"id": 2}}, "theme": "Dark", "content": {"body": {"text": "Get detailed commercial pressure washing services from Sunday to protect your property and reputation."}, "title": {"text": "Commercial"}, "buttons": [{"label": "Get started", "destination": "/"}], "pretitle": {"text": null}}, "overlay": true}, {"image": {"file": {"id": 2}}, "theme": "Dark", "content": {"body": {"text": "Keep your home clean and impressive with Sunday\'s thorough and customized residential pressure washing services."}, "title": {"text": "Residential"}, "buttons": [{"label": "Get started", "destination": "/"}], "pretitle": {"text": null}}, "overlay": true}], "content": {"body": {"text": null}, "title": {"text": "Washing homes and businesses since 2007"}}, "wrapper": {"image": null, "theme": "root", "overlay": false}}', true),
             ],
             [
                 'page_id' => 1,
@@ -75,14 +75,14 @@ class LocalBlockSeeder extends Seeder
                 'group' => 'Hero',
                 'component' => 'HeroSplit',
                 'order' => 4,
-                'data' => json_decode('{"image": {"file": {"id": 4}}, "content": {"body": {"text": "Let\'s restore your property."}, "title": {"text": "Ready to go?"}, "buttons": [{"label": "Get my quote", "destination": "/"}], "pretitle": {"text": null}}, "wrapper": {"image": null, "theme": "root", "overlay": false}}', true),
+                'data' => json_decode('{"image": {"file": {"id": 1}}, "content": {"body": {"text": "Let\'s restore your property."}, "title": {"text": "Ready to go?"}, "buttons": [{"label": "Get my quote", "destination": "/"}], "pretitle": {"text": null}}, "wrapper": {"image": null, "theme": "root", "overlay": false}}', true),
             ],
             [
                 'page_id' => 1,
                 'group' => 'Reviews',
                 'component' => 'Review',
                 'order' => 5,
-                'data' => json_decode('{"wrapper": {"image": null, "theme": "Light"}, "review": {"extra": {"text": "Salt Lake City"}, "image": {"file": {"id": 13}}, "quote": {"text": "\"Anthony and his team washed my whole house. They did awesome work at such a good price. 100% recommend.\""}, "author": {"text": "John D."}}}', true),
+                'data' => json_decode('{"wrapper": {"image": null, "theme": "Light"}, "review": {"extra": {"text": "Salt Lake City"}, "image": {"file": {"id": 2}}, "quote": {"text": "\"Anthony and his team washed my whole house. They did awesome work at such a good price. 100% recommend.\""}, "author": {"text": "John D."}}}', true),
             ],
 
             // [
