@@ -18,6 +18,7 @@ class LocalWebsiteSeeder extends Seeder
                 'title' => 'Main Website',
                 'slug' => 'acme',
                 'domain' => 'acme.com',
+                'settings' => json_decode('{"title": null, "footer": {"logo": null, "menu": []}, "navbar": {"logo": {"file": {"id": 4, "filename": "logo.svg", "extension": "svg"}}, "menu": [{"path": "/services", "title": "Services"}, {"path": "/about", "title": "About"}, {"path": "/locations", "title": "Locations"}]}, "favicon": null, "description": null}'),
                 'design' => json_decode('{"colors": [{"name": "Black", "value": "#000000", "variable": "black"}, {"name": "White", "value": "#ffffff", "variable": "white"}], "themes": [{"name": "Default", "selector": ":root", "variables": {"textColor": "black", "wrapperBg": "white", "titleColor": "black", "btnPrimaryBg": "black", "btnSimpleText": "black", "pretitleColor": "black", "btnPrimaryText": "white", "btnSecondaryBg": "white", "btnSecondaryText": "black"}}]}'),
             ],
             [

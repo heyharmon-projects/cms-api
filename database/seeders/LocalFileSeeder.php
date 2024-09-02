@@ -22,6 +22,9 @@ class LocalFileSeeder extends Seeder
             [
                 'filename' => 'placeholder-image-tall.png',
             ],
+            [
+                'filename' => 'logo.svg',
+            ]
         ];
 
         foreach ($files as $file) {
