@@ -35,11 +35,6 @@ class LocalPageSeeder extends Seeder
             ],
             [
                 'website_id' => 1,
-                'title' => 'Contact',
-                'path' => '/contact',
-            ],
-            [
-                'website_id' => 1,
                 'title' => 'Free Quote',
                 'path' => '/free-quote',
             ],
