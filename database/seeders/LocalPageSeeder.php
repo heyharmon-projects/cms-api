@@ -17,6 +17,7 @@ class LocalPageSeeder extends Seeder
                 'website_id' => 1,
                 'title' => 'Homepage',
                 'path' => '/',
+                'settings' => json_decode('{"meta_image": {"file": {"id": 6, "filename": "meta-image.png", "extension": "png"}}, "meta_title": "Homepage meta title", "meta_description": "This is the homepage meta description."}')
             ],
             [
                 'website_id' => 1,

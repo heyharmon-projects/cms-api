@@ -19,7 +19,7 @@ class PageResource extends JsonResource
             'is_published' => $this->is_published,
             'title' => $this->title,
             'path' => $this->path,
-            // 'blocks' => $this->blocks,
+            'settings' => $this->settings,
             'blocks' => $this->whenLoaded('blocks'),
         ];
     }

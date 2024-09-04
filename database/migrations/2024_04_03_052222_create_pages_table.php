@@ -17,6 +17,7 @@ return new class extends Migration
             $table->boolean('is_published')->default(false);
             $table->string('title');
             $table->string('path');
+            $table->json('settings')->nullable();
             $table->timestamps();
         });
     }

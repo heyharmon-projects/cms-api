@@ -25,6 +25,7 @@ class PageUpdateRequest extends FormRequest
         return [
             'title' => 'nullable|string',
             'path' => 'nullable|string',
+            'settings' => 'nullable|array',
         ];
     }
 

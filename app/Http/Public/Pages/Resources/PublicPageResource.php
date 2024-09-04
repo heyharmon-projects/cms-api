@@ -15,6 +15,7 @@ class PublicPageResource extends JsonResource
         return [
             'title' => $this->title,
             'path' => $this->path,
+            'settings' => $this->settings,
             'blocks' => $this->blocks,
         ];
     }

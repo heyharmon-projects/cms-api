@@ -5,6 +5,7 @@ namespace DDD\Domain\Pages;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use DDD\Domain\Websites\Website;
+use DDD\Domain\Pages\Cast\PageSettingsCast;
 use DDD\Domain\Blocks\Block;
 
 class Page extends Model
@@ -13,6 +14,10 @@ class Page extends Model
 
     protected $guarded = [
         'id',
+    ];
+
+    protected $casts = [
+        'settings' => PageSettingsCast::class,
     ];
 
     /**
